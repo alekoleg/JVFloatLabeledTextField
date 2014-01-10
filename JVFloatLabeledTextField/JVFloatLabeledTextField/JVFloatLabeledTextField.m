@@ -156,6 +156,13 @@
     [_floatingLabel sizeToFit];
 }
 
+- (void)setAttributedPlaceholder:(NSAttributedString *)attributedPlaceholder {
+    [super setAttributedPlaceholder:attributedPlaceholder];
+    
+    _floatingLabel.attributedText = attributedPlaceholder;
+    [_floatingLabel sizeToFit];
+}
+
 - (CGRect)textRectForBounds:(CGRect)bounds
 {
     return UIEdgeInsetsInsetRect([super textRectForBounds:bounds], UIEdgeInsetsMake(ceilf(_floatingLabel.font.lineHeight+_floatingLabelYPadding.floatValue), 0.0f, 0.0f, 0.0f));

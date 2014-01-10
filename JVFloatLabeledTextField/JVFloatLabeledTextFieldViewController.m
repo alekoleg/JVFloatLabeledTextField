@@ -85,6 +85,8 @@ const static CGFloat kJVFieldFloatingLabelFontSize = 11.0f;
     priceField.floatingLabelTextColor = floatingLabelColor;
     [self.view addSubview:priceField];
     
+    
+    priceField.attributedPlaceholder = [[NSAttributedString alloc]initWithString:@"wkegfew" attributes:@{NSForegroundColorAttributeName: [UIColor redColor]}];
     UIView *div2 = [UIView new];
     div2.frame = CGRectMake(kJVFieldHMargin + priceField.frame.size.width,
                             titleField.frame.origin.y + titleField.frame.size.height,
